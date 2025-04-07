@@ -34,7 +34,7 @@ class _InviteCodeScreenState extends State<InviteCodeScreen> {
 
     final response = await MemberApi.updateMemberGroup(request);
 
-    if (response != null) {
+    if (response) {
       Navigator.pushNamedAndRemoveUntil(context, '/home', (_) => false);
     } else {
       ScaffoldMessenger.of(
